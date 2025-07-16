@@ -38,7 +38,9 @@ As plantas superiores possuem três estruturas principais:
 - **Folhas** 🍃  
   Responsáveis pela fotossíntese, respiração e transpiração. Captam a luz solar e realizam trocas gasosas.
 
-> 📷 **[ESPAÇO PARA IMAGEM: Estrutura básica da planta – Raiz, caule e folha]**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/285411c7-76be-473b-aee5-0451d42ff9b5" alt="estrutura da planta" width="60%">
+</p>
 
 ---
 
@@ -54,7 +56,9 @@ Os **vasos condutores** são estruturas presentes em plantas mais complexas e se
 
 Esses vasos são essenciais para o crescimento de plantas de maior porte e estão ausentes em grupos mais simples, como as briófitas.
 
-> 📷 **[ESPAÇO PARA IMAGEM: Xilema e floema em corte de caule]**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f6b37d9c-9190-46a1-ba5e-04c90d861274" alt="vasos condutores" width="60%">
+</p>
 
 ---
 
@@ -73,8 +77,6 @@ As principais diferenças entre os grupos de plantas estão na presença ou aus�
 | Pteridófitas   | ✅        | ❌           | ❌        | ❌         |
 | Gimnospermas   | ✅        | ✅           | ❌        | ❌         |
 | Angiospermas   | ✅        | ✅           | ✅        | ✅         |
-
-> 📷 **[ESPAÇO PARA IMAGEM: Tabela comparativa dos grupos vegetais]**
 
 ---
 
@@ -130,8 +132,6 @@ A reprodução nas plantas ocorre por diferentes estruturas, dependendo do grupo
 - **Flores**: responsáveis pela reprodução sexual  
 - **Frutos**: protegem e ajudam na dispersão das sementes
 
-> 📷 **[ESPAÇO PARA IMAGEM: Flor ou estrutura reprodutiva]**
-
 ---
 
 ## 8. 🔄 Ciclo de Vida: Alternância de Gerações
@@ -142,7 +142,5 @@ As plantas apresentam um ciclo de vida chamado **diplobionte**, com **alternânc
 - **Esporófito** (2n): fase diploide que produz esporos por meiose
 
 Essas fases se alternam ao longo do desenvolvimento, variando conforme o grupo vegetal.
-
-> 📷 **[ESPAÇO PARA IMAGEM: Ciclo de vida das plantas]**
 
 ---
