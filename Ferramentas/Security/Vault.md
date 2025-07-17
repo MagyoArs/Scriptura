@@ -13,7 +13,7 @@ O [**Vault**](https://developer.hashicorp.com/vault) da HashiCorp é uma ferrame
 O Vault pode ser implantado em ambientes **on-premises**, na **nuvem** ou de forma **híbrida**. Seu design é **modular**, baseado em plugins para autenticação, engines de segredos e backends de armazenamento.
 
 <p align="center">
-  <img src="https://github.ibm.com/Alan-Lima/Vault-HashiCorp/assets/485032/6af4a8db-5f3c-4ec7-a4b2-32e3f615bfb3" alt="Arquitetura Centralizada" width="600">
+  <img src="https://github.com/user-attachments/assets/dfa21c72-949f-420f-a6de-ad324f698c96" alt="Arquitetura Centralizada" width="600">
 </p>
 
 <p align="center">
