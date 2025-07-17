@@ -1,9 +1,11 @@
-# Vault HashiCorp 
+# Vault HashiCorp
 
 ## Sumário
+
 * [1. O que é o Vault?](#1-o-que-é-o-vault)
   * [1.1. O que são segredos?](#11-o-que-são-segredos)
-  * [1.2. Principais funcionalidades](#12-principais-funcionalidades)
+  * [1.2. Funções de gerenciamento (o que o Vault faz)](#12-funções-de-gerenciamento-o-que-o-vault-faz)
+  * [1.3. Mecanismos e capacidades técnicas (como o Vault faz)](#13-mecanismos-e-capacidades-técnicas-como-o-vault-faz)
 
 ---
 
@@ -31,21 +33,36 @@ Segredos são informações confidenciais e críticas para o funcionamento segur
 
 ---
 
-### 1.2. Principais funcionalidades
+### 1.2. Funções de gerenciamento (o que o Vault faz)
 
-* Segurança baseada em identidade
-* Criptografia de dados
-* Gerenciar dados confidenciais
-* Gerenciar segredos estáticos
-* Gerenciar segredos de terceiros
-* Mecanismos de segredos para segredos estáticos e dinâmicos
-* Gerenciar certificados
-* Gerenciar identidades e autenticação
-* Autenticação humana e de máquina
-* Controle de acesso
-* Acesso com limite de tempo
-* Apoiar a conformidade regulatória
-* Escala de desempenho
-* Suporte para recuperação de desastres
+O Vault oferece diversas funcionalidades voltadas à **administração segura de informações sensíveis**, permitindo centralizar e controlar o acesso a segredos de forma eficiente:
+
+* **Gerenciar dados confidenciais:**
+* **Gerenciar segredos estáticos:**
+* **Gerenciar segredos de terceiros:**
+* **Gerenciar certificados:**
+* **Gerenciar identidades e autenticação:**
+* **Autenticação humana e de máquina:**
+* **Controle de acesso:**
+* **Acesso com limite de tempo:**
+* **Apoiar a conformidade regulatória:**
 
 ---
+
+### 1.3. Mecanismos e capacidades técnicas (como o Vault faz)
+
+Para viabilizar suas funcionalidades, o Vault utiliza **mecanismos internos especializados** que permitem gerar, armazenar e proteger segredos de maneira dinâmica e escalável:
+
+* **Mecanismos de segredos para segredos estáticos e dinâmicos**
+  *Ex: engines como KV (Key-Value), Database, PKI, AWS, etc.*
+* **Segurança baseada em identidade**
+  *Ex: integração com OIDC, LDAP, Kubernetes, etc.*
+* **Criptografia de dados**
+  *Ex: uso do engine Transit para criptografia de dados em trânsito e em repouso*
+* **Escala de desempenho**
+  *Ex: suporte a namespaces, replicação, alta disponibilidade, etc.*
+* **Suporte para recuperação de desastres**
+  *Ex: estratégias de backup, DR clusters, snapshots, etc.*
+
+---
+
