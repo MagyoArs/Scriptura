@@ -104,7 +104,7 @@ Os plugins são utilizados em três áreas principais:
 O Vault já inclui **diversos plugins integrados** prontos para uso, mas também permite o carregamento de **plugins externos** — desenvolvidos por terceiros ou internamente — para atender casos de uso específicos, como integração com ferramentas proprietárias, novos tipos de autenticação, ou engines personalizados de segredos.
 
 <p align="center">
-  <img src="image.png" alt="Arquitetura de plugin do Vault" width="600">
+  <img src="https://github.com/user-attachments/assets/f7ffebf6-5616-4ccc-a76a-ffecba477c08" alt="Arquitetura de plugin do Vault" width="600">
 </p>
 
 <p align="center">
@@ -119,7 +119,7 @@ O Vault já inclui **diversos plugins integrados** prontos para uso, mas também
 O ciclo de vida de um plugin envolve o carregamento, registro e ativação no Vault. Plugins externos precisam ser aprovados pelo administrador e registrados manualmente antes de serem usados por clientes.
 
 <p align="center">
-  <img src="image-1.png" alt="Ciclo de vida de plugin" width="600">
+  <img src="https://github.com/user-attachments/assets/cd25491a-2f6a-49c6-8046-1dc17cec15e8" alt="Ciclo de vida de plugin" width="600">
 </p>
 
 <p align="center">
