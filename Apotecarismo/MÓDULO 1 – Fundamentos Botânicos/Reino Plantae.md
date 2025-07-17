@@ -71,41 +71,49 @@ As principais diferenças entre os grupos de plantas estão na presença ou aus�
 - **Flores**
 - **Frutos**
 
-| 🌿 Grupo        | 🪴 Vasos | 🌰 Sementes | 🌸 Flores | 🍎 Frutos |
-|----------------|-----------|--------------|-----------|------------|
-| Briófitas      | ❌        | ❌           | ❌        | ❌         |
-| Pteridófitas   | ✅        | ❌           | ❌        | ❌         |
-| Gimnospermas   | ✅        | ✅           | ❌        | ❌         |
-| Angiospermas   | ✅        | ✅           | ✅        | ✅         |
+| 🌿 Grupo     | 🪴 Vasos | 🌰 Sementes | 🌸 Flores | 🍎 Frutos |
+| ------------ | -------- | ----------- | --------- | --------- |
+| Briófitas    | ❌       | ❌          | ❌        | ❌        |
+| Pteridófitas | ✅       | ❌          | ❌        | ❌        |
+| Gimnospermas | ✅       | ✅          | ❌        | ❌        |
+| Angiospermas | ✅       | ✅          | ✅        | ✅        |
 
 ---
 
 ## 5. 🌿 Classificação dos Principais Grupos de Plantas
 
-### Briófitas  
-Plantas simples, de pequeno porte, que vivem em ambientes úmidos.  
-- Sem vasos condutores  
-- Sem estruturas verdadeiras (raiz, caule e folha)  
-- Reprodução por esporos  
-*Exemplo:* **Musgos**
+### Briófitas
 
-### Pteridófitas  
-Plantas com vasos condutores e estruturas verdadeiras.  
-- Sem flores nem sementes  
-- Reprodução por esporos  
-*Exemplo:* **Samambaias**
+Plantas simples, de pequeno porte, que vivem em ambientes úmidos.
 
-### Gimnospermas  
-Plantas com sementes **expostas** (sem frutos).  
-- Possuem vasos condutores  
+- Sem vasos condutores
+- Sem estruturas verdadeiras (raiz, caule e folha)
+- Reprodução por esporos  
+  _Exemplo:_ **Musgos**
+
+### Pteridófitas
+
+Plantas com vasos condutores e estruturas verdadeiras.
+
+- Sem flores nem sementes
+- Reprodução por esporos  
+  _Exemplo:_ **Samambaias**
+
+### Gimnospermas
+
+Plantas com sementes **expostas** (sem frutos).
+
+- Possuem vasos condutores
 - Sem flores verdadeiras  
-*Exemplo:* **Pinheiros, araucárias**
+  _Exemplo:_ **Pinheiros, araucárias**
 
-### Angiospermas  
-O grupo mais moderno e diverso.  
-- Com flores e frutos  
+### Angiospermas
+
+O grupo mais moderno e diverso.
+
+- Com flores e frutos
 - Sementes protegidas  
-*Exemplo:* **Mangueira, feijão, roseira, trigo**
+  _Exemplo:_ **Mangueira, feijão, roseira, trigo**
 
 ---
 
@@ -115,11 +123,11 @@ As plantas também podem ser classificadas quanto à **visibilidade das estrutur
 
 - **Criptógamas** 🔬  
   Estruturas reprodutivas pouco visíveis, sem flores ou sementes.  
-  *Exemplo:* Briófitas e pteridófitas
+  _Exemplo:_ Briófitas e pteridófitas
 
 - **Fanerógamas** 🌸  
   Estruturas reprodutivas visíveis, com flores e sementes.  
-  *Exemplo:* Gimnospermas e angiospermas
+  _Exemplo:_ Gimnospermas e angiospermas
 
 ---
 
@@ -127,9 +135,9 @@ As plantas também podem ser classificadas quanto à **visibilidade das estrutur
 
 A reprodução nas plantas ocorre por diferentes estruturas, dependendo do grupo:
 
-- **Esporos**: em briófitas e pteridófitas  
-- **Sementes**: em gimnospermas e angiospermas  
-- **Flores**: responsáveis pela reprodução sexual  
+- **Esporos**: em briófitas e pteridófitas
+- **Sementes**: em gimnospermas e angiospermas
+- **Flores**: responsáveis pela reprodução sexual
 - **Frutos**: protegem e ajudam na dispersão das sementes
 
 ---
@@ -138,7 +146,7 @@ A reprodução nas plantas ocorre por diferentes estruturas, dependendo do grupo
 
 As plantas apresentam um ciclo de vida chamado **diplobionte**, com **alternância de gerações**:
 
-- **Gametófito** (n): fase haploide que produz gametas (óvulos e espermatozoides)  
+- **Gametófito** (n): fase haploide que produz gametas (óvulos e espermatozoides)
 - **Esporófito** (2n): fase diploide que produz esporos por meiose
 
 Essas fases se alternam ao longo do desenvolvimento, variando conforme o grupo vegetal.
