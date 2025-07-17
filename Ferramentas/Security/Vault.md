@@ -35,17 +35,34 @@ Segredos são informações confidenciais e críticas para o funcionamento segur
 
 ### 1.2. Funções de gerenciamento (o que o Vault faz)
 
-O Vault oferece diversas funcionalidades voltadas à **administração segura de informações sensíveis**, permitindo centralizar e controlar o acesso a segredos de forma eficiente:
+O Vault oferece funcionalidades voltadas à **administração centralizada e segura** de segredos, acessos e identidades:
 
-* **Gerenciar dados confidenciais:**
-* **Gerenciar segredos estáticos:**
-* **Gerenciar segredos de terceiros:**
-* **Gerenciar certificados:**
-* **Gerenciar identidades e autenticação:**
-* **Autenticação humana e de máquina:**
-* **Controle de acesso:**
-* **Acesso com limite de tempo:**
-* **Apoiar a conformidade regulatória:**
+* **Gerenciar dados confidenciais**
+  Armazena e protege informações sensíveis como chaves de criptografia, segredos de aplicação e configurações privadas, com controle de acesso e auditoria.
+
+* **Gerenciar segredos estáticos**
+  Armazena segredos fixos como senhas, tokens e chaves de API de forma segura, usando o engine KV (Key-Value), com versionamento e expiração opcional.
+
+* **Gerenciar segredos de terceiros**
+  Integra com provedores externos (ex: AWS, Azure, GCP) para armazenar ou gerar segredos temporários que são consumidos por aplicações e usuários.
+
+* **Gerenciar certificados**
+  Emite, renova e revoga certificados digitais automaticamente por meio do engine PKI, reduzindo a complexidade da gestão manual de certificados.
+
+* **Gerenciar identidades e autenticação**
+  Permite integração com provedores de identidade (ex: LDAP, OIDC, Kubernetes) para autenticar usuários e sistemas com base em identidade centralizada.
+
+* **Autenticação humana e de máquina**
+  Suporta múltiplos métodos de autenticação para pessoas (ex: login com GitHub ou OIDC) e aplicações (ex: JWT, AppRole, TLS mTLS).
+
+* **Controle de acesso**
+  Define políticas granulares que determinam quem pode acessar quais segredos, com base em identidade, contexto e regras de autorização.
+
+* **Acesso com limite de tempo**
+  Garante que acessos e credenciais tenham tempo de vida definido (TTL), reduzindo riscos de vazamento e uso indevido de segredos.
+
+* **Apoiar a conformidade regulatória**
+  Oferece recursos como logs de auditoria, rotação automática de segredos e segregação de acesso para atender a exigências de compliance (ex: GDPR, HIPAA, ISO).
 
 ---
 
