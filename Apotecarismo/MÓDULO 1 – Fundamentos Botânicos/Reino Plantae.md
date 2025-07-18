@@ -27,16 +27,25 @@ As plantas são fundamentais para o equilíbrio ecológico e fazem parte da hist
 
 ## 2. 🏗️ Estrutura Básica das Plantas
 
-As plantas superiores possuem três estruturas principais:
+As plantas superiores possuem diversas estruturas especializadas que garantem sua sobrevivência, reprodução e adaptação ao ambiente. As principais são:
 
-- **Raízes** 🌱  
+* **Raízes** 🌱
   Fixam a planta ao solo e absorvem água e sais minerais.
 
-- **Caule** 🌿  
+* **Caule** 🌿
   Sustenta a planta e transporta a seiva entre raízes e folhas por meio dos vasos condutores.
 
-- **Folhas** 🍃  
+* **Folhas** 🍃
   Responsáveis pela fotossíntese, respiração e transpiração. Captam a luz solar e realizam trocas gasosas.
+
+* **Flores** 🌸
+  Estruturas reprodutivas das fanerógamas. Contêm órgãos masculinos e femininos e possibilitam a formação de sementes.
+
+* **Sementes** 🌰
+  Resultam da fecundação dos gametas e carregam o embrião da futura planta, além de nutrientes de reserva.
+
+* **Frutos** 🍎
+  Desenvolvem-se a partir do ovário das flores e protegem as sementes, facilitando sua dispersão.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/285411c7-76be-473b-aee5-0451d42ff9b5" alt="estrutura da planta" width="60%">
