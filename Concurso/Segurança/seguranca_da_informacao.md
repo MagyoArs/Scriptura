@@ -1,101 +1,130 @@
 # Segurança da Informação
 
-## 1. Conceito
+## 1. Introdução e Conceito
 
-Segurança da Informação (SI) é o conjunto de práticas, políticas, normas e tecnologias destinadas a proteger **informações** — em qualquer formato — contra acesso não autorizado, alteração, destruição ou divulgação indevida.
+Segurança da Informação (SI) é o conjunto de práticas, políticas, normas e tecnologias aplicadas para proteger as **informações** — em qualquer formato — contra ameaças, garantindo que seus **pilares fundamentais** sejam respeitados: **confidencialidade**, **integridade**, **disponibilidade**, **autenticidade**, **não-repúdio** e **privacidade**.
 
----
-
-## 2. Princípios Fundamentais
-
-| Princípio         | Definição                                    | Exemplo                                            |
-| ----------------- | -------------------------------------------- | -------------------------------------------------- |
-| Confidencialidade | Acesso apenas a quem tem autorização.        | Arquivos criptografados com controle de acesso.    |
-| Integridade       | Protege contra alterações indevidas.         | Verificação com hash SHA-256 após backup.          |
-| Disponibilidade   | Garante acesso quando necessário.            | Infraestrutura redundante e sistemas com failover. |
-| Autenticidade     | Assegura que o emissor é legítimo.           | Assinatura digital em e-mail corporativo.          |
-| Não-repúdio       | Impede que o autor negue uma ação realizada. | Logs com carimbo de tempo e assinatura digital.    |
-| Privacidade       | Protege a identidade e os dados pessoais.    | Consentimento e anonimização em bancos de dados.   |
+A SI se aplica em todos os níveis — do uso pessoal de dispositivos a corporações e instituições públicas. Seu foco está na proteção de **dados sensíveis** e na continuidade dos negócios.
 
 ---
 
-## 3. Ameaças Cibernéticas 
+## 2. Princípios Fundamentais da Segurança da Informação
 
-| Ameaça            | Definição e Atuação                                                               | Exemplo                                                                 |
-| ----------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Phishing          | E-mail/site falso que tenta enganar a vítima para obter senhas ou dados pessoais. | "Atualize sua conta bancária clicando aqui" — imitação de bancos reais. |
-| Spear Phishing    | Phishing altamente direcionado com dados específicos da vítima.                   | E-mail falso com nome da vítima, cargo e nome do gerente.               |
-| Ransomware        | Malware que criptografa dados e exige resgate.                                    | Caso WannaCry em 2017: atingiu empresas e hospitais globalmente.        |
-| Keylogger         | Captura tudo que é digitado no teclado.                                           | Instalado em lan houses para roubar senhas.                             |
-| Engenharia Social | Manipulação psicológica para obter acesso ou dados.                               | Telefonema fingindo ser do suporte técnico pedindo senha.               |
-| SQL Injection     | Injeção de código SQL malicioso em formulários.                                   | `SELECT * FROM users WHERE username = 'admin' OR 1=1;`                  |
-| Exploit           | Código que explora vulnerabilidades específicas.                                  | CVE-2017-0144 (EternalBlue): explorado pelo WannaCry.                   |
-| Botnet            | Rede de máquinas comprometidas controladas remotamente.                           | Ataques massivos a servidores DNS via milhares de dispositivos IoT.     |
-| DoS/DDoS          | Sobrecarga do sistema por excesso de requisições simultâneas.                     | Ataque ao DynDNS (2016) causou queda de Netflix, Twitter e outros.      |
-| Spyware           | Programa espião que monitora o usuário sem autorização.                           | Ferramentas ocultas em aplicativos gratuitos suspeitos.                 |
+| Princípio         | Definição                                                           | Exemplo                                                         |
+| ----------------- | ------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Confidencialidade | Garante que somente pessoas autorizadas tenham acesso à informação. | Documento criptografado com acesso restrito por login.          |
+| Integridade       | Assegura que a informação não foi alterada indevidamente.           | Verificação de hash SHA-256 após transferência de arquivos.     |
+| Disponibilidade   | Garante que os dados estejam disponíveis quando necessários.        | Sistema com balanceamento de carga e failover automático.       |
+| Autenticidade     | Confirma a identidade de quem acessa a informação.                  | Autenticação com biometria ou token OTP.                        |
+| Não-repúdio       | Impede que o autor de uma ação negue sua autoria.                   | Assinatura digital com carimbo de tempo em contrato eletrônico. |
+| Privacidade       | Assegura que os dados pessoais sejam protegidos.                    | Anonimização de dados conforme a LGPD.                          |
 
 ---
 
-## 4. Vulnerabilidades e Gestão de Risco
+## 3. Ameaças e Tipos de Malware
 
-Vulnerabilidade é uma falha em sistemas, softwares, redes ou configurações que pode ser explorada. A **gestão de vulnerabilidades** compreende:
+### 3.1. Ameaças Cibernéticas Comuns
 
-1. **Identificação** (ex: scanners de segurança)
-2. **Avaliação de criticidade** (baixa, média, alta)
-3. **Correção ou mitigação** (patches, reconfiguração)
-4. **Monitoramento contínuo**
-
-### Tipos comuns de vulnerabilidades:
-
-* **Zero-day**: desconhecida até então pelos fornecedores.
-* **CVE (Common Vulnerabilities and Exposures)**: vulnerabilidades conhecidas e publicadas.
-* **Misconfiguração**: erros de configuração como serviços sem senha ou portas abertas desnecessárias.
-
-**Ferramentas úteis**: Nessus, OpenVAS, Qualys, Nikto.
+| Tipo           | Definição                                                            | Exemplo                                                         |
+| -------------- | -------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Phishing       | Tentativa de obter dados sensíveis por meio de e-mails/sites falsos. | E-mail imitando banco solicitando "atualização de dados".       |
+| Spear Phishing | Phishing direcionado e personalizado para a vítima.                  | E-mail para o RH com nome da vítima e anexo malicioso.          |
+| Ransomware     | Sequestra dados com criptografia e exige resgate.                    | WannaCry (2017): afetou hospitais e empresas globalmente.       |
+| Keylogger      | Registra teclas digitadas para roubar senhas/dados.                  | Instalado via malware em dispositivos públicos.                 |
+| Worm           | Se replica automaticamente e se espalha por redes.                   | Conficker (2008): infectou milhões de PCs via vulnerabilidades. |
+| Trojan         | Apresenta-se como software legítimo, mas contém código malicioso.    | Crack de software com backdoor.                                 |
+| Adware         | Exibe propagandas indesejadas e pode coletar dados do usuário.       | Aplicativos de celular com anúncios invasivos.                  |
+| Spyware        | Espiona atividades do usuário em segredo.                            | Aplicativos ocultos que monitoram localização e conversas.      |
+| Rootkit        | Se oculta no sistema para manter acesso privilegiado.                | Rootkits de firmware que impedem a detecção de antivírus.       |
+| Botnet         | Conjunto de máquinas infectadas controladas remotamente.             | Ataques DDoS massivos coordenados por dispositivos IoT zumbis.  |
+| Cryptojacker   | Usa recursos do sistema para minerar criptomoedas sem permissão.     | Script oculto em site que usa CPU do visitante.                 |
+| SQL Injection  | Envia comandos SQL maliciosos por formulários.                       | `OR '1'='1` permite login sem senha.                            |
+| XSS            | Injeção de scripts em páginas web.                                   | Campo de comentários com JavaScript malicioso.                  |
 
 ---
 
-## 5. Controles de Segurança
+## 4. Vulnerabilidades e Gestão de Vulnerabilidades
 
-| Tipo de Controle | Objetivo                                 | Exemplos                                         |
-| ---------------- | ---------------------------------------- | ------------------------------------------------ |
-| Preventivo       | Evitar que incidentes ocorram.           | Firewall, criptografia, senhas fortes.           |
-| Detectivo        | Identificar ocorrências ou tentativas.   | IDS, SIEM, logs de sistema.                      |
-| Corretivo        | Minimizar impacto e restaurar operações. | Backup, plano de recuperação de desastres (DRP). |
+### 4.1. O que é uma Vulnerabilidade?
+
+Vulnerabilidade é qualquer **falha de segurança** (de software, hardware, rede ou processos) que pode ser explorada para comprometer a confidencialidade, integridade ou disponibilidade das informações.
+
+**Exemplos:**
+
+- Serviços desatualizados com falhas conhecidas.
+- Permissões excessivas concedidas a usuários.
+- Senhas fracas ou reutilizadas.
+
+### 4.2. Tipos de Vulnerabilidades
+
+| Tipo            | Definição                                                                        |
+| --------------- | -------------------------------------------------------------------------------- |
+| Zero-day        | Descoberta recente, sem correção disponível.                                     |
+| CVE             | Vulnerabilidades públicas listadas na base Common Vulnerabilities and Exposures. |
+| Misconfiguração | Erros de configuração, como serviços sem autenticação.                           |
+
+### 4.3. Ciclo de Vida da Gestão de Vulnerabilidades
+
+1. **Identificação** – via scanners (Nessus, OpenVAS).
+2. **Avaliação** – classificar severidade (CVSS).
+3. **Correção** – aplicar patches ou mitigação.
+4. **Validação** – testar a correção aplicada.
+5. **Monitoramento contínuo** – manter vigilância por SIEM, logs e auditorias.
+
+---
+
+## 5. Controles de Segurança da Informação
+
+| Tipo       | Função                                        | Exemplos                                             |
+| ---------- | --------------------------------------------- | ---------------------------------------------------- |
+| Preventivo | Evitar que o incidente ocorra.                | Firewall, autenticação forte, políticas de acesso.   |
+| Detectivo  | Identificar eventos em andamento ou passados. | SIEM, IDS, monitoramento de logs, honeypots.         |
+| Corretivo  | Restaurar sistemas após incidente.            | Backup, plano de recuperação de desastres, failover. |
+
+**Controles podem ser:**
+
+- **Físicos**: câmeras, biometria.
+- **Lógicos**: criptografia, firewall, MFA.
+- **Administrativos**: normas, políticas e treinamentos.
 
 ---
 
 ## 6. Ferramentas e Tecnologias
 
-| Ferramenta         | Utilização prática                                                |
-| ------------------ | ----------------------------------------------------------------- |
-| Firewall           | Regras que filtram o tráfego de entrada/saída.                    |
-| IDS/IPS            | Detecção e prevenção de intrusões em rede (ex: Snort, Suricata).  |
-| SIEM               | Agrega e correlaciona logs para alertas (ex: Splunk, ELK, Wazuh). |
-| VPN                | Canal seguro criptografado entre redes públicas e privadas.       |
-| WAF                | Protege aplicações web de ataques como XSS e SQLi.                |
-| MFA (Autenticação) | Autenticação em dois fatores: senha + token ou biometria.         |
-| EDR                | Proteção avançada de endpoint com resposta automatizada.          |
+| Ferramenta                                           | Descrição e Aplicação                                                                    |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| **Firewall**                                         | Controla tráfego de rede com base em regras. Pode ser perimetral ou pessoal.             |
+| **WAF (Web Application Firewall)**                   | Protege aplicações web contra XSS, SQLi, etc.                                            |
+| **IDS (Intrusion Detection System)**                 | Detecta atividade suspeita, sem bloquear.                                                |
+| **IPS (Intrusion Prevention System)**                | Detecta e bloqueia automaticamente intrusões.                                            |
+| **EDR (Endpoint Detection and Response)**            | Monitoramento contínuo e resposta automática em estações de trabalho.                    |
+| **SIEM (Security Information and Event Management)** | Centraliza, correlaciona e analisa eventos de segurança. Ex: Splunk, Wazuh, ELK.         |
+| **VPN (Virtual Private Network)**                    | Estabelece conexão segura e criptografada entre redes.                                   |
+| **Failover**                                         | Mecanismo automático de transferência de serviços para sistema reserva em caso de falha. |
 
 ---
 
-## 7. Governança de Segurança e Normas ISO
+## 7. Backup, Continuidade e Recuperação
 
-**Governança de Segurança** refere-se ao conjunto de políticas, normas e práticas que guiam a gestão da segurança em uma organização. Os principais elementos são:
+| Conceito                               | Definição e Aplicação                                                         |
+| -------------------------------------- | ----------------------------------------------------------------------------- |
+| Backup                                 | Cópia dos dados feita periodicamente. Pode ser local, em nuvem ou em SAN/NAS. |
+| Restore                                | Processo de restauração do backup.                                            |
+| SAN (Storage Area Network)             | Armazenamento em rede dedicado, de alta performance.                          |
+| NAS (Network Attached Storage)         | Armazenamento em rede compartilhado, acessível como unidade de rede.          |
+| PCN (Plano de Continuidade de Negócio) | Garante funcionamento mínimo após falha.                                      |
+| DRP (Disaster Recovery Plan)           | Plano de resposta pós-incidente severo. Ex: queda de datacenter.              |
 
-* **PSI (Política de Segurança da Informação)**: define regras sobre acesso, responsabilidade e uso dos dados.
-* **Plano de Continuidade de Negócio (PCN)**: garante o funcionamento mínimo em caso de incidentes.
-* **Plano de Recuperação de Desastres (DRP)**: reestabelece a normalidade após falhas severas.
-* **Pentest**: simulação de ataques reais para testar a robustez dos sistemas.
+---
 
-### Normas ISO mais relevantes:
+## 8. Normas ISO Relacionadas à Segurança da Informação
 
-| Norma             | Foco principal                                                                                                               |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| **ISO/IEC 27001** | Estabelece os requisitos para criar, manter e melhorar um Sistema de Gestão de Segurança da Informação (SGSI). Certificável. |
-| **ISO/IEC 27002** | Diretrizes de boas práticas em controles de segurança — complementa a 27001.                                                 |
-| **ISO/IEC 27005** | Estrutura para gestão de riscos de segurança da informação.                                                                  |
-| **ISO/IEC 27017** | Controles específicos para ambientes em nuvem.                                                                               |
-| **ISO/IEC 27701** | Privacidade e proteção de dados — extensão da ISO 27001 para a LGPD/GDPR.                                                    |
+| Norma ISO     | Objetivo Principal                                                           |
+| ------------- | ---------------------------------------------------------------------------- |
+| ISO/IEC 27001 | Requisitos para um Sistema de Gestão de Segurança da Informação (SGSI).      |
+| ISO/IEC 27002 | Boas práticas para controles de segurança definidos na 27001.                |
+| ISO/IEC 27005 | Gestão de riscos aplicada à Segurança da Informação.                         |
+| ISO/IEC 27017 | Segurança em ambientes de computação em nuvem.                               |
+| ISO/IEC 27701 | Gestão da privacidade e dados pessoais (complementa a 27001 para LGPD/GDPR). |
 
-A mais importante é a **ISO/IEC 27001**, pois define o padrão internacional para SGSI e é certificável — servindo como base para auditorias e regulamentações. A **27002** orienta como implementar os controles definidos na 27001. Já a **27005** ajuda na gestão de riscos, crucial para ambientes corporativos.
+**Importância:** A ISO 27001 é a base para auditorias e certificações de segurança em nível organizacional.
