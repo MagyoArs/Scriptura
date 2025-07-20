@@ -23,7 +23,7 @@ A SI se aplica em todos os níveis — do uso pessoal de dispositivos a corpora�
 
 ## 3. Ameaças e Tipos de Malware
 
-### 3.1. Ameaças Cibernéticas Comuns
+### 3.1. Tipos de Ameaças Cibernéticas
 
 | Tipo           | Definição                                                            | Exemplo                                                          |
 | -------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------- |
@@ -31,103 +31,108 @@ A SI se aplica em todos os níveis — do uso pessoal de dispositivos a corpora�
 | Spear Phishing | Phishing direcionado e personalizado para a vítima.                  | E-mail para o RH com nome da vítima e anexo malicioso.           |
 | Pharming       | Redireciona a vítima para site falso mesmo digitando URL correta.    | Manipulação do DNS para simular site bancário real.              |
 | Spoofing       | Falsificação de identidade (e-mail, IP, ARP).                        | E-mail com remetente falso fingindo ser o presidente da empresa. |
-| Ransomware     | Sequestra dados com criptografia e exige resgate.                    | WannaCry (2017): afetou hospitais e empresas globalmente.        |
-| Keylogger      | Registra teclas digitadas para roubar senhas/dados.                  | Instalado via malware em dispositivos públicos.                  |
-| Worm           | Se replica automaticamente e se espalha por redes.                   | Conficker (2008): infectou milhões de PCs via vulnerabilidades.  |
-| Trojan         | Apresenta-se como software legítimo, mas contém código malicioso.    | Crack de software com backdoor.                                  |
-| Adware         | Exibe propagandas indesejadas e pode coletar dados do usuário.       | Aplicativos de celular com anúncios invasivos.                   |
-| Spyware        | Espiona atividades do usuário em segredo.                            | Aplicativos ocultos que monitoram localização e conversas.       |
-| Rootkit        | Se oculta no sistema para manter acesso privilegiado.                | Rootkits de firmware que impedem a detecção de antivírus.        |
-| Botnet         | Conjunto de máquinas infectadas controladas remotamente.             | Ataques DDoS massivos coordenados por dispositivos IoT zumbis.   |
-| Cryptojacker   | Usa recursos do sistema para minerar criptomoedas sem permissão.     | Script oculto em site que usa CPU do visitante.                  |
-| SQL Injection  | Envia comandos SQL maliciosos por formulários.                       | `OR '1'='1` permite login sem senha.                             |
-| XSS            | Injeção de scripts em páginas web.                                   | Campo de comentários com JavaScript malicioso.                   |
+
+### 3.2. Tipos de Malware
+
+| Tipo         | Definição                                                  | Exemplo                                                   |
+| ------------ | ---------------------------------------------------------- | --------------------------------------------------------- |
+| Ransomware   | Sequestra dados com criptografia e exige resgate.          | WannaCry (2017): afetou hospitais e empresas globalmente. |
+| Keylogger    | Registra teclas digitadas para roubar senhas/dados.        | Instalado via malware em dispositivos públicos.           |
+| Worm         | Se replica automaticamente e se espalha por redes.         | Conficker (2008): infectou milhões de PCs.                |
+| Trojan       | Software malicioso disfarçado de legítimo.                 | Crack de software com backdoor.                           |
+| Adware       | Exibe propagandas indesejadas e coleta dados.              | Aplicativo com pop-ups invasivos.                         |
+| Spyware      | Espiona atividades do usuário.                             | Monitoramento de navegação e teclas digitadas.            |
+| Rootkit      | Se oculta no sistema para manter acesso privilegiado.      | Rootkit de kernel impede antivírus.                       |
+| Botnet       | Rede de dispositivos infectados e controlados remotamente. | Usado em ataques DDoS massivos.                           |
+| Cryptojacker | Usa a CPU da vítima para minerar criptomoedas.             | Script escondido em site ou e-mail HTML.                  |
+| SQLi         | Injeta código SQL em formulários.                          | `OR 1=1 --` para burlar login.                            |
+| XSS          | Injeta scripts maliciosos em páginas web.                  | Comentário HTML com JS de roubo de cookie.                |
 
 ---
 
-## 4. Vulnerabilidades e Gestão de Vulnerabilidades
+## 4. Vulnerabilidades e sua Gestão
 
-### 4.1. O que é uma Vulnerabilidade?
+### 4.1. Definição
 
-Vulnerabilidade é qualquer **falha de segurança** (de software, hardware, rede ou processos) que pode ser explorada para comprometer a confidencialidade, integridade ou disponibilidade das informações.
+Falhas que podem ser exploradas para comprometer os pilares da SI.
 
 **Exemplos:**
 
-* Serviços desatualizados com falhas conhecidas.
-* Permissões excessivas concedidas a usuários.
-* Senhas fracas ou reutilizadas.
+* Software desatualizado;
+* Configurações inseguras;
+* Privilégios excessivos.
 
-### 4.2. Tipos de Vulnerabilidades
+### 4.2. Tipos
 
-| Tipo            | Definição                                                                        |
-| --------------- | -------------------------------------------------------------------------------- |
-| Zero-day        | Descoberta recente, sem correção disponível.                                     |
-| CVE             | Vulnerabilidades públicas listadas na base Common Vulnerabilities and Exposures. |
-| Misconfiguração | Erros de configuração, como serviços sem autenticação.                           |
+| Tipo            | Definição                                                                     |
+| --------------- | ----------------------------------------------------------------------------- |
+| Zero-day        | Ainda não conhecida publicamente nem pelo fabricante.                         |
+| CVE             | Registro formal de vulnerabilidade publicado publicamente.                    |
+| Misconfiguração | Falhas de configuração, como permissões abertas ou autenticação desabilitada. |
 
-### 4.3. Ciclo de Vida da Gestão de Vulnerabilidades
+### 4.3. Ciclo de Vida
 
-1. **Identificação** – via scanners (Nessus, OpenVAS).
-2. **Avaliação** – classificar severidade (CVSS).
-3. **Correção** – aplicar patches ou mitigação.
-4. **Validação** – testar a correção aplicada.
-5. **Monitoramento contínuo** – manter vigilância por SIEM, logs e auditorias.
-
----
-
-## 5. Controles de Segurança da Informação
-
-| Tipo       | Função                                        | Exemplos                                             |
-| ---------- | --------------------------------------------- | ---------------------------------------------------- |
-| Preventivo | Evitar que o incidente ocorra.                | Firewall, autenticação forte, políticas de acesso.   |
-| Detectivo  | Identificar eventos em andamento ou passados. | SIEM, IDS, monitoramento de logs, honeypots.         |
-| Corretivo  | Restaurar sistemas após incidente.            | Backup, plano de recuperação de desastres, failover. |
-
-**Controles podem ser:**
-
-* **Físicos**: câmeras, biometria.
-* **Lógicos**: criptografia, firewall, MFA.
-* **Administrativos**: normas, políticas e treinamentos.
+1. **Identificação** (scanner: Nessus, OpenVAS);
+2. **Avaliação** (classifica por CVSS);
+3. **Correção** (patch, mitigacão);
+4. **Validação** (teste de eficiência);
+5. **Monitoramento** (SIEM, auditoria, logs).
 
 ---
 
-## 6. Ferramentas e Tecnologias
+## 5. Ferramentas e Tecnologias
 
-| Ferramenta                                           | Descrição e Aplicação                                                                    |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| **Firewall**                                         | Controla tráfego de rede com base em regras. Pode ser perimetral ou pessoal.             |
-| **WAF (Web Application Firewall)**                   | Protege aplicações web contra XSS, SQLi, etc.                                            |
-| **IDS (Intrusion Detection System)**                 | Detecta atividade suspeita, sem bloquear.                                                |
-| **IPS (Intrusion Prevention System)**                | Detecta e bloqueia automaticamente intrusões.                                            |
-| **EDR (Endpoint Detection and Response)**            | Monitoramento contínuo e resposta automática em estações de trabalho.                    |
-| **SIEM (Security Information and Event Management)** | Centraliza, correlaciona e analisa eventos de segurança. Ex: Splunk, Wazuh, ELK.         |
-| **VPN (Virtual Private Network)**                    | Estabelece conexão segura e criptografada entre redes.                                   |
-| **Failover**                                         | Mecanismo automático de transferência de serviços para sistema reserva em caso de falha. |
-| **Alta Disponibilidade (HA)**                        | Estratégia para manter sistemas ativos e acessíveis mesmo durante falhas.                |
-
----
-
-## 7. Backup, Continuidade e Recuperação
-
-| Conceito                               | Definição e Aplicação                                                         |
-| -------------------------------------- | ----------------------------------------------------------------------------- |
-| Backup                                 | Cópia dos dados feita periodicamente. Pode ser local, em nuvem ou em SAN/NAS. |
-| Restore                                | Processo de restauração do backup.                                            |
-| SAN (Storage Area Network)             | Armazenamento em rede dedicado, de alta performance. Ideal para data centers. |
-| NAS (Network Attached Storage)         | Armazenamento em rede compartilhado, acessível como unidade de rede.          |
-| PCN (Plano de Continuidade de Negócio) | Garante funcionamento mínimo após falha.                                      |
-| DRP (Disaster Recovery Plan)           | Plano de resposta pós-incidente severo. Ex: queda de datacenter.              |
+| Tecnologia           | Função principal                                                                 |
+| -------------------- | -------------------------------------------------------------------------------- |
+| Firewall             | Bloqueio e liberação de tráfego por regras.                                      |
+| WAF                  | Proteção de aplicações web contra XSS, SQLi, etc.                                |
+| IDS                  | Detecta ataques, mas não bloqueia.                                               |
+| IPS                  | Detecta e bloqueia automaticamente.                                              |
+| EDR                  | Detecta, analisa e responde ameaças em endpoints.                                |
+| SIEM                 | Centraliza logs e eventos, correlaciona incidentes.                              |
+| VPN                  | Cria túnel criptografado para conexão remota segura.                             |
+| Failover             | Redireciona para recurso de backup automaticamente em caso de falha.             |
+| Alta disponibilidade | Conjunto de técnicas que garantem operação mesmo com falhas parciais do sistema. |
 
 ---
 
-## 8. Normas ISO Relacionadas à Segurança da Informação
+## 6. Controles de Segurança
 
-| Norma ISO     | Objetivo Principal                                                           |
-| ------------- | ---------------------------------------------------------------------------- |
-| ISO/IEC 27001 | Requisitos para um Sistema de Gestão de Segurança da Informação (SGSI).      |
-| ISO/IEC 27002 | Boas práticas para controles de segurança definidos na 27001.                |
-| ISO/IEC 27005 | Gestão de riscos aplicada à Segurança da Informação.                         |
-| ISO/IEC 27017 | Segurança em ambientes de computação em nuvem.                               |
-| ISO/IEC 27701 | Gestão da privacidade e dados pessoais (complementa a 27001 para LGPD/GDPR). |
+| Tipo       | Objetivo                              | Exemplos                                             |
+| ---------- | ------------------------------------- | ---------------------------------------------------- |
+| Preventivo | Impedir que ocorra um incidente.      | Políticas, firewall, autenticação multifator.        |
+| Detectivo  | Identificar atividades suspeitas.     | IDS, SIEM, monitoramento de logs.                    |
+| Corretivo  | Restaurar operação após um incidente. | Backup, failover, plano de recuperação de desastres. |
 
-**Importância:** A ISO 27001 é a base para auditorias e certificações de segurança em nível organizacional. A ISO 27005 é especialmente relevante para análise e mitigação de riscos, e a ISO 27017 amplia os controles para serviços em nuvem, fundamentais no contexto atual de transformação digital.
+**Categorias:**
+
+* **Físicos:** câmeras, acesso com crachá;
+* **Lógicos:** criptografia, senhas fortes;
+* **Administrativos:** políticas, treinamentos, normas.
+
+---
+
+## 7. Backup, Recuperação e Continuidade
+
+| Conceito | Função                                                             |
+| -------- | ------------------------------------------------------------------ |
+| Backup   | Cópia periódica de dados. Pode ser local, em nuvem, SAN ou NAS.    |
+| Restore  | Restauração dos dados após falha.                                  |
+| SAN      | Rede de armazenamento dedicada e de alta performance.              |
+| NAS      | Armazenamento conectado à rede, compartilhado em ambientes comuns. |
+| PCN      | Plano para manter o funcionamento mínimo durante falhas.           |
+| DRP      | Ações para recuperação total após desastre.                        |
+
+---
+
+## 8. Normas ISO Relacionadas
+
+| Norma     | Finalidade                                           |
+| --------- | ---------------------------------------------------- |
+| ISO 27001 | Requisitos para SGSI.                                |
+| ISO 27002 | Diretrizes para controles de segurança.              |
+| ISO 27005 | Diretrizes para gestão de riscos.                    |
+| ISO 27017 | Segurança em computação em nuvem.                    |
+| ISO 27701 | Gestão da privacidade e dados pessoais (LGPD, GDPR). |
+
+**Nota:** A ISO 27001 é a principal para certificações, enquanto a ISO 27005 trata de riscos e a 27017 aborda nuvem, cada vez mais cobradas em provas de concursos.
