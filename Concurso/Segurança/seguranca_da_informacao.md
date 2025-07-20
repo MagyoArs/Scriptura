@@ -19,7 +19,7 @@ Segurança da Informação (SI) é o conjunto de práticas, políticas, normas e
 
 ---
 
-## 3. Ameaças Cibernéticas (com Exemplos Reais)
+## 3. Ameaças Cibernéticas 
 
 | Ameaça            | Definição e Atuação                                                               | Exemplo                                                                 |
 | ----------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -99,5 +99,3 @@ Vulnerabilidade é uma falha em sistemas, softwares, redes ou configurações qu
 | **ISO/IEC 27701** | Privacidade e proteção de dados — extensão da ISO 27001 para a LGPD/GDPR.                                                    |
 
 A mais importante é a **ISO/IEC 27001**, pois define o padrão internacional para SGSI e é certificável — servindo como base para auditorias e regulamentações. A **27002** orienta como implementar os controles definidos na 27001. Já a **27005** ajuda na gestão de riscos, crucial para ambientes corporativos.
-
----
