@@ -25,21 +25,23 @@ A SI se aplica em todos os níveis — do uso pessoal de dispositivos a corpora�
 
 ### 3.1. Ameaças Cibernéticas Comuns
 
-| Tipo           | Definição                                                            | Exemplo                                                         |
-| -------------- | -------------------------------------------------------------------- | --------------------------------------------------------------- |
-| Phishing       | Tentativa de obter dados sensíveis por meio de e-mails/sites falsos. | E-mail imitando banco solicitando "atualização de dados".       |
-| Spear Phishing | Phishing direcionado e personalizado para a vítima.                  | E-mail para o RH com nome da vítima e anexo malicioso.          |
-| Ransomware     | Sequestra dados com criptografia e exige resgate.                    | WannaCry (2017): afetou hospitais e empresas globalmente.       |
-| Keylogger      | Registra teclas digitadas para roubar senhas/dados.                  | Instalado via malware em dispositivos públicos.                 |
-| Worm           | Se replica automaticamente e se espalha por redes.                   | Conficker (2008): infectou milhões de PCs via vulnerabilidades. |
-| Trojan         | Apresenta-se como software legítimo, mas contém código malicioso.    | Crack de software com backdoor.                                 |
-| Adware         | Exibe propagandas indesejadas e pode coletar dados do usuário.       | Aplicativos de celular com anúncios invasivos.                  |
-| Spyware        | Espiona atividades do usuário em segredo.                            | Aplicativos ocultos que monitoram localização e conversas.      |
-| Rootkit        | Se oculta no sistema para manter acesso privilegiado.                | Rootkits de firmware que impedem a detecção de antivírus.       |
-| Botnet         | Conjunto de máquinas infectadas controladas remotamente.             | Ataques DDoS massivos coordenados por dispositivos IoT zumbis.  |
-| Cryptojacker   | Usa recursos do sistema para minerar criptomoedas sem permissão.     | Script oculto em site que usa CPU do visitante.                 |
-| SQL Injection  | Envia comandos SQL maliciosos por formulários.                       | `OR '1'='1` permite login sem senha.                            |
-| XSS            | Injeção de scripts em páginas web.                                   | Campo de comentários com JavaScript malicioso.                  |
+| Tipo           | Definição                                                            | Exemplo                                                          |
+| -------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Phishing       | Tentativa de obter dados sensíveis por meio de e-mails/sites falsos. | E-mail imitando banco solicitando "atualização de dados".        |
+| Spear Phishing | Phishing direcionado e personalizado para a vítima.                  | E-mail para o RH com nome da vítima e anexo malicioso.           |
+| Pharming       | Redireciona a vítima para site falso mesmo digitando URL correta.    | Manipulação do DNS para simular site bancário real.              |
+| Spoofing       | Falsificação de identidade (e-mail, IP, ARP).                        | E-mail com remetente falso fingindo ser o presidente da empresa. |
+| Ransomware     | Sequestra dados com criptografia e exige resgate.                    | WannaCry (2017): afetou hospitais e empresas globalmente.        |
+| Keylogger      | Registra teclas digitadas para roubar senhas/dados.                  | Instalado via malware em dispositivos públicos.                  |
+| Worm           | Se replica automaticamente e se espalha por redes.                   | Conficker (2008): infectou milhões de PCs via vulnerabilidades.  |
+| Trojan         | Apresenta-se como software legítimo, mas contém código malicioso.    | Crack de software com backdoor.                                  |
+| Adware         | Exibe propagandas indesejadas e pode coletar dados do usuário.       | Aplicativos de celular com anúncios invasivos.                   |
+| Spyware        | Espiona atividades do usuário em segredo.                            | Aplicativos ocultos que monitoram localização e conversas.       |
+| Rootkit        | Se oculta no sistema para manter acesso privilegiado.                | Rootkits de firmware que impedem a detecção de antivírus.        |
+| Botnet         | Conjunto de máquinas infectadas controladas remotamente.             | Ataques DDoS massivos coordenados por dispositivos IoT zumbis.   |
+| Cryptojacker   | Usa recursos do sistema para minerar criptomoedas sem permissão.     | Script oculto em site que usa CPU do visitante.                  |
+| SQL Injection  | Envia comandos SQL maliciosos por formulários.                       | `OR '1'='1` permite login sem senha.                             |
+| XSS            | Injeção de scripts em páginas web.                                   | Campo de comentários com JavaScript malicioso.                   |
 
 ---
 
@@ -51,9 +53,9 @@ Vulnerabilidade é qualquer **falha de segurança** (de software, hardware, rede
 
 **Exemplos:**
 
-- Serviços desatualizados com falhas conhecidas.
-- Permissões excessivas concedidas a usuários.
-- Senhas fracas ou reutilizadas.
+* Serviços desatualizados com falhas conhecidas.
+* Permissões excessivas concedidas a usuários.
+* Senhas fracas ou reutilizadas.
 
 ### 4.2. Tipos de Vulnerabilidades
 
@@ -83,9 +85,9 @@ Vulnerabilidade é qualquer **falha de segurança** (de software, hardware, rede
 
 **Controles podem ser:**
 
-- **Físicos**: câmeras, biometria.
-- **Lógicos**: criptografia, firewall, MFA.
-- **Administrativos**: normas, políticas e treinamentos.
+* **Físicos**: câmeras, biometria.
+* **Lógicos**: criptografia, firewall, MFA.
+* **Administrativos**: normas, políticas e treinamentos.
 
 ---
 
@@ -101,6 +103,7 @@ Vulnerabilidade é qualquer **falha de segurança** (de software, hardware, rede
 | **SIEM (Security Information and Event Management)** | Centraliza, correlaciona e analisa eventos de segurança. Ex: Splunk, Wazuh, ELK.         |
 | **VPN (Virtual Private Network)**                    | Estabelece conexão segura e criptografada entre redes.                                   |
 | **Failover**                                         | Mecanismo automático de transferência de serviços para sistema reserva em caso de falha. |
+| **Alta Disponibilidade (HA)**                        | Estratégia para manter sistemas ativos e acessíveis mesmo durante falhas.                |
 
 ---
 
@@ -110,7 +113,7 @@ Vulnerabilidade é qualquer **falha de segurança** (de software, hardware, rede
 | -------------------------------------- | ----------------------------------------------------------------------------- |
 | Backup                                 | Cópia dos dados feita periodicamente. Pode ser local, em nuvem ou em SAN/NAS. |
 | Restore                                | Processo de restauração do backup.                                            |
-| SAN (Storage Area Network)             | Armazenamento em rede dedicado, de alta performance.                          |
+| SAN (Storage Area Network)             | Armazenamento em rede dedicado, de alta performance. Ideal para data centers. |
 | NAS (Network Attached Storage)         | Armazenamento em rede compartilhado, acessível como unidade de rede.          |
 | PCN (Plano de Continuidade de Negócio) | Garante funcionamento mínimo após falha.                                      |
 | DRP (Disaster Recovery Plan)           | Plano de resposta pós-incidente severo. Ex: queda de datacenter.              |
@@ -127,4 +130,4 @@ Vulnerabilidade é qualquer **falha de segurança** (de software, hardware, rede
 | ISO/IEC 27017 | Segurança em ambientes de computação em nuvem.                               |
 | ISO/IEC 27701 | Gestão da privacidade e dados pessoais (complementa a 27001 para LGPD/GDPR). |
 
-**Importância:** A ISO 27001 é a base para auditorias e certificações de segurança em nível organizacional.
+**Importância:** A ISO 27001 é a base para auditorias e certificações de segurança em nível organizacional. A ISO 27005 é especialmente relevante para análise e mitigação de riscos, e a ISO 27017 amplia os controles para serviços em nuvem, fundamentais no contexto atual de transformação digital.
